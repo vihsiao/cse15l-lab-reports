@@ -11,6 +11,7 @@ __HELLO THERE__
 ![An image I found](https://i.imgflip.com/x4ir0.jpg)
 
 > "Just do it!"
+> "Is A better than B, or B better than C?"
 
 * Yes
 * No
