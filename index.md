@@ -6,7 +6,7 @@ __HELLO THERE__
 
 ## Como estas usted?
 
-[Homepage](https://vihsiao.github.io/cse15l-lab-reports/)
+[Lab Report 1](https://vihsiao.github.io/lab-report-1-week-0.html)
 
 ![An image I found](https://i.imgflip.com/x4ir0.jpg)
 
