@@ -1,2 +1,2 @@
-# A Screenshot
+__This screenshot__
 ![Screenshot of Lab](screenshot.png)
