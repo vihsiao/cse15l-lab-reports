@@ -9,3 +9,5 @@ In this tutorial, we will learn to install VScode,
 * If you have installed it correctly, you should be able to open a window that looks like this:
 
 ![VS Code on Windows](screenshot_vscode.png)
+
+## Step 2: Install VScode
