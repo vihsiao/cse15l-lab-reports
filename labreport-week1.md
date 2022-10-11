@@ -35,6 +35,8 @@ You can run some commands on the remote computer, some include
 * `ls`
 * `ls -lat`
 
+![Commands](commands.png)
+
 ## Step 4: Copy files from local to remote computer through SCP
 
 Through the command `scp`, you can copy files from your local to remote computer
@@ -81,7 +83,9 @@ Some ways to make running Java programs easier
 
 * After logging into ssh, run `javac` and `java` commands straight after by putting them in quotes
 
-`ssh cs15lfa22@ieng6.ucsd.edu "javac hello.java" "java hello.java"`
+`ssh cs15lfa22@ieng6.ucsd.edu "javac hello.java; java hello"`
+
+![](runjava.png)
 
 * Use semicolons to run multiple commands in one line
 
