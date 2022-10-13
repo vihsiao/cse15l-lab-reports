@@ -104,7 +104,7 @@ After adding some items, when searching for an item, you change the path to `sea
 
 This command returns all keywords with the character "f" in it
 
-When using the search keyword it activates this if statement
+When using the search keyword it activates this if statement, and gets the keyword by pulling the url and getting the path after the `"="`
 
 ```
 if (url.getPath().contains("/search")) {
