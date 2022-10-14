@@ -83,7 +83,7 @@ you just inputted
 
 ![](updatedlist.png)
 
-When you add the path `add?s=valorant` to the localhost, it calls the if statement looking for the keyword `add`, so it will get the part after the `=` and add it to the list
+When you add the path `add?s=` to the localhost, it calls the if statement looking for the keyword `add`, so it will get the part after the `=` and add it to the list
 
 ```
 else if (url.getPath().contains("/add")) {
@@ -92,7 +92,6 @@ else if (url.getPath().contains("/add")) {
     return String.format("%s added to the list!", parameters[1]);
 }
 ```
----
 
 **Updated list:**
 
@@ -123,3 +122,85 @@ if (url.getPath().contains("/search")) {
 ---
 
 ## **Part 2: Catching Bugs**
+
+In this part, we will test for bugs in the two methods down below
+
+The first method we will look at is `averageWithoutLowest` from the class ArrayExamples
+
+The goal of the method is to get the average of the list of numbers without its lowest number
+
+```
+static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+      if(num != lowest) { sum += num; }
+    }
+    return sum / (arr.length - 1);
+  }
+```
+
+One of the failure-inducing inputs for this method is when the array contains the same element (ex: `[3,3,3,3]`)
+
+![](arrayfail.png)
+
+It produces the symptom below, where the expected output is 3, but the actual output is 0
+
+![](arraysymptom.png)
+
+The bug in the code is that when trying to exclude the lowest number from the sum, it would remove every instance of it, instead of removing it once
+
+To fix this, remove the lowest number at the end
+
+**Updated Code**
+
+```
+static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num <= lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+      sum += num;
+    }
+    return (sum - lowest) / (arr.length - 1);
+}
+```
+
+---
+
+The second method we will look at is `filter` from the class ListExamples
+
+The goal of the method is to filter out all of the strings that contain a certain keyword
+
+```
+static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(0, s);
+      }
+    }
+    return result;
+  }
+```
+
+One of the failure-inducing inputs for this method is the array `["pineapple", "grape", "apple", "snapple", "banana", "grapple"]`, where the keyword to check for in each of the strings is `"app"`
+
+![](testFilter.png)
+
+The input returns the symptom below
+
+![](listsymptom.png)
+
+The bug in the code is that when adding the item containing the keyword `"app"` to the `result` list, it adds it to the beginning of the array, causing it to return a list where the words are in reverse order
+
+To fix this, remove the `0` in the add statement, resulting in the code below
+
+![](correctlistcode.png)
