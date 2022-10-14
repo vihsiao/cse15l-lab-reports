@@ -152,7 +152,7 @@ It produces the symptom below, where the expected output is 3, but the actual ou
 
 ![](arraysymptom.png)
 
-The bug in the code is that when trying to exclude the lowest number from the sum, it would remove every instance of it, instead of removing it once
+The bug in the code is when trying to exclude the lowest number from the sum, it removes every instance of it, instead of removing it once
 
 To fix this, remove the lowest number at the end
 
