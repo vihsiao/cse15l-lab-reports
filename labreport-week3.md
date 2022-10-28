@@ -74,7 +74,9 @@ It sees that there is no path, so it prints the line:  `Current list: []`
 
 ------
 
-To add an item to the list, you enter the localhost link into the search bar, plus the path `add?s=valorant` (in this case, I added the item `valorant`)
+To add an item to the list, you enter the localhost link into the search bar, plus the path `add?s=valorant` (added the item `valorant`)
+
+The total path is `localhost:[port number]/add?s='keyword'`
 
 ![](additem.png)
 
@@ -97,7 +99,11 @@ else if (url.getPath().contains("/add")) {
 
 ![](currentlist.png)
 
-After adding some items, when searching for an item, you change the path to `search?s=` and after the equals sign you add the keyword (in this case `"f"`)
+After adding some items, when searching for an item, you change the path to `search?s=` plus the keyword
+
+The server knows to search because when the program calls `getPath()` from the given url, it checks if the path contains the part `/search`
+
+It will also split the path at the `=` sign, so it will separate and get the keyword and loop through the array to return words containing the given keyword
 
 ![](query.png)
 
@@ -152,7 +158,16 @@ It produces the symptom below, where the expected output is 3, but the actual ou
 
 ![](arraysymptom.png)
 
-The bug in the code is when trying to exclude the lowest number from the sum, it removes every instance of it, instead of removing it once
+The bug is located at the second for loop
+
+```
+for(double num: arr) {
+    if(num != lowest) {
+        sum += num; 
+}
+```
+
+This bug causes the symptom above because when trying to exclude the lowest number from the sum, the for loop excludes every instance of it, instead of excluding it once
 
 To fix this, remove the lowest number at the end
 
@@ -199,7 +214,15 @@ The input returns the symptom below
 
 ![](listsymptom.png)
 
-The bug in the code is that when adding the item containing the keyword `"app"` to the `result` list, it adds it to the beginning of the array, causing it to return a list where the words are in reverse order
+The bug in the code is at this if statement
+
+```
+if(sc.checkString(s)) {
+    result.add(0, s);
+}
+```
+
+This causes the symptom above because when adding the item containing the keyword `"app"` to the `result` list, it adds it to the beginning of the array, causing it to return a list where the words are in reverse order
 
 To fix this, remove the `0` in the add statement, resulting in the code below
 
