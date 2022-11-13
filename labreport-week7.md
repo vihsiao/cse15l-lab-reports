@@ -44,7 +44,7 @@ Press `:w` to save the program
 
 The complete sequence should be:
 
-`/` + `s` + `t` + `a` + `r` + `t` + `Enter` + `c` + `w` + `b` + `a` + `s` + `e` + `<Esc>` + `n` + `.` + `n` + `.` + `:` + `w`
+> `/` + `s` + `t` + `a` + `r` + `t` + `Enter` + `c` + `w` + `b` + `a` + `s` + `e` + `<Esc>` + `n` + `.` + `n` + `.` + `:` + `w`
 
 ## **Part 2: Local -> Remote vs Just Remote**
 
@@ -74,7 +74,7 @@ This approach took me around **45** seconds
 
 I used the sequence that was mentioned in part 1 of this report
 
-`/` + `s` + `t` + `a` + `r` + `t` + `Enter` + `c` + `w` + `b` + `a` + `s` + `e` + `<Esc>` + `n` + `.` + `n` + `.` + `:` + `w` + `q`
+> `/` + `s` + `t` + `a` + `r` + `t` + `Enter` + `c` + `w` + `b` + `a` + `s` + `e` + `<Esc>` + `n` + `.` + `n` + `.` + `:` + `w` + `q`
 
 **Conclusion**
 

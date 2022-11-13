@@ -20,6 +20,10 @@ __HELLO THERE__
 
 [Lab Report 3](https://vihsiao.github.io/cse15l-lab-reports/labreport-week5)
 
+## Lab Report 4
+
+[Lab Report 4](https://vihsiao.github.io/cse15l-lab-reports/labreport-week7)
+
 > "Just do it!"
 > "Is A better than B, or B better than C?"
 
