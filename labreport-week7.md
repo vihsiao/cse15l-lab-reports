@@ -4,9 +4,9 @@
 
 The task that I will do for this part is:
 
-In `DocSearchServer.java`, add a new line right before `File[] paths = f.listFiles();` that prints out the `toString` of `f` and a message saying it’s a directory.`
+In `DocSearchServer.java`, add a new line right before `File[] paths = f.listFiles();` that prints out the `toString` of `f` and a message saying it’s a directory.
 
-First, open `DocSearchServer.java` in Vim
+Open `DocSearchServer.java` in Vim
 
 ![](load_vim.png)
 
