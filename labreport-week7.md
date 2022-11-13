@@ -58,6 +58,28 @@ You load the folder onto the remote server, edit `DocSearchServer` on ssh, and r
 
 **First Option**
 
+The task is to edit `DocSearchServer.java` in VS Code on the local machine and `scp` the folder into `ieng6` and run it there
 
+Doing it this way took around 5 minutes, the `scp` took the longest amount of time to do out of all the steps for this task
+
+To scp the entire `skill-demo1` folder and all of its files to ieng6, you have to use the `-r` flag
 
 **Second Option**
+
+For this option, you load the folder onto the remote server, edit `DocSearchServer` on ssh, and run it there
+
+Note: It is assumed that you already loaded the folder onto ieng6
+
+This approach took me around **45** seconds
+
+I used the sequence that was mentioned in part 1 of this report
+
+`/` + `s` + `t` + `a` + `r` + `t` + `Enter` + `c` + `w` + `b` + `a` + `s` + `e` + `<Esc>` + `n` + `.` + `n` + `.` + `:` + `w` + `q`
+
+**Conclusion**
+
+Between the two approaches mentioned above, I would prefer to use the second approach because it is faster than the first one
+
+It also has to do with the fact that I know enough Vim to be able to use the sequence from part 1 to make doing the task more efficiently
+
+If I didn't know any of the commands, I would have preferred the first option
