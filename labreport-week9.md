@@ -146,4 +146,6 @@ The number of tests ran and tests failed will be returned also
 
 If all tests passed, exit return code is 0 and autograder will return a message that shows that you passed all tests
 
+![](labreport-week9-test2.png)
+
 -------------------------
