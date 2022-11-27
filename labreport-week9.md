@@ -46,10 +46,15 @@ fi
 exit 0
 ```
 
-## How it works
+## **How grade.sh works**
 
 1. Clones GitHub repo and stores ListExamples.java code in student-submission folder
 
 2. Pulls ListExamples from folder student-submission (if statement to check if it existed in github repo that was pulled)
 
-3. Compiles ListExamples and all other Java folders
+3. Compiles ListExamples and TestListExamples (java file with test cases for ListExamples)
+
+4. Returns error output if at least one of the tests fails, will return tests ran and how many failed, and the total score
+
+## **Three different repos for autograder**
+
